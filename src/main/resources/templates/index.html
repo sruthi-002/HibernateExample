@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Home page</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body style="background-color:powderblue;">
+    <div>
+          <table style="background-color:pink;margin-left:auto;margin-right:auto;" border="1" cellspacing="0" cellpadding="4">
+             <td><table border="2" cellpadding="8"><tr >
+              <th>Id</th>
+              <th >Name</th>
+              <th>Desigination</th>
+            </tr>
+           <tr th:each="design : ${listAll}">
+              <td th:text="${design.id}"></td>
+              <td th:text="${book.name}"></td>
+              <td th:text="${book.desigination}"></td>
+            </tr>
+          </table>
+        </div>
+    </body>
+</html>
